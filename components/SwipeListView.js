@@ -408,7 +408,7 @@ class SwipeListView extends PureComponent {
                 this.setRefs.bind(this),
                 this.onScroll.bind(this),
                 useRenderRow
-                    ? this.renderRow.bind(this, this._rows)
+                    ? this.renderRow.bind(this)
                     : this.renderItem.bind(this)
             );
         }
