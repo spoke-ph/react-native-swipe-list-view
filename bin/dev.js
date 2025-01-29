@@ -12,13 +12,13 @@ fs.readdir('SwipeListExample/examples', (err, files) => {
     if (err) {
         return console.log(err);
     }
-    files.forEach(fileName => {
+    files.forEach((fileName) => {
         const fullPath = `SwipeListExample/examples/${fileName}`;
         swapImports(fullPath);
     });
 });
 
-const swapImports = path => {
+const swapImports = (path) => {
     fs.readFile(path, 'utf8', (err, data) => {
         if (err) {
             return console.log(err);
@@ -39,7 +39,7 @@ const swapImports = path => {
             "import SwipeRow from '../SwipeRow';"
         );
 
-        fs.writeFile(path, result, 'utf8', err => {
+        fs.writeFile(path, result, 'utf8', (err) => {
             if (err) {
                 return console.log(err);
             }
