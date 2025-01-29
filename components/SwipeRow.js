@@ -366,8 +366,8 @@ class SwipeRow extends Component {
             }, 500); // 500 is the default Animated.spring's duration used in manuallySwipeRow
         }
         // decide how much the velocity will affect the final position that the list item settles in.
-        const swipeToOpenVelocityContribution = this.props
-            .swipeToOpenVelocityContribution;
+        const swipeToOpenVelocityContribution =
+            this.props.swipeToOpenVelocityContribution;
         const possibleExtraPixels =
             this.props.rightOpenValue * swipeToOpenVelocityContribution;
         const clampedVelocity = Math.min(
@@ -642,7 +642,7 @@ class SwipeRow extends Component {
                 <Animated.View
                     manipulationModes={['translateX']}
                     {...this._panResponder.panHandlers}
-                    onLayout={e => this.onContentLayout(e)}
+                    onLayout={(e) => this.onContentLayout(e)}
                     style={{
                         zIndex: 2,
                         transform: [{ translateX: this._translateX }],
